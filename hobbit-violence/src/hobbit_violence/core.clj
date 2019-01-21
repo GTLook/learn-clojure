@@ -1,11 +1,6 @@
 (ns hobbit-violence.core
   (:gen-class))
 
-(defn -main
-  "Runs functions defined below"
-  [& args]
-  (println "yes?"))
-
 (def asym-hobbit-body-parts [{:name "head" :size 3}
                              {:name "left-eye" :size 1}
                              {:name "left-ear" :size 1}
@@ -41,3 +36,8 @@
         (recur remaining
           (into final-body-parts
             (set [part (matching-part part)])))))))
+
+(defn -main
+  "Runs functions defined below"
+  [& args]
+  (println (symmetrize-body-parts asym-hobbit-body-parts)))
