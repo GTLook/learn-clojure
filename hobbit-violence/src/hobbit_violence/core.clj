@@ -57,6 +57,6 @@
     (recur remaining (+ accumulated-size (:size (first remaining))))))))
 
 (defn -main
-  "Runs functions defined below"
+  "Runs functions"
   [& args]
   (println (hit asym-hobbit-body-parts)))
